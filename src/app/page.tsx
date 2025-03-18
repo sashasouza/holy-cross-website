@@ -1,13 +1,12 @@
 import * as React from 'react';
-import Image from 'next/image';
 import { Box, Grid2, Typography } from '@mui/material';
 
-import BigLogo from '../assets/3_Logo_Intro.png';
-import RedLeftArrowBg from '../assets/HeaderTitleRedBG.png';
-import HomeAboutBG from '../assets/homeAboutBG.png';
-import HomeAboutBGMobile from '../assets/homeAboutBG-Responsive.png';
-import NoImg from '../assets/4_No.png';
-import HighlightBoxes from '../components/HighlightBoxes';
+import CabList from '@/components/CabList';
+import BookCab from '@/components/BookCab';
+import AboutUs from '@/components/AboutUs';
+import CarRental from '@/components/CarRental';
+import Assistance from '@/components/Assistance';
+import Reviews from '@/components/Reviews';
 
 export const metadata = {};
 
@@ -39,7 +38,31 @@ const Hero = () => {
     return (
         <>
             <Typography color="primary" variant="h5">
-                Content here
+                <Grid2 container spacing={2} display="flex" justifyContent="space-around" alignItems="center" size="grow" sx={{
+                    padding: '1em',
+                    backgroundColor: '#F5F5F5',
+                    scrollMargin: '1em',
+                    scrollBehavior: 'smooth'
+                }}>
+                    <Grid2>
+                        <CabList />
+                    </Grid2>
+                    <Grid2>
+                        <BookCab />
+                    </Grid2>
+                </Grid2>
+                <Grid2>
+                    <AboutUs />
+                </Grid2>
+                <Grid2>
+                    <CarRental />
+                </Grid2>
+                <Grid2>
+                    <Assistance />
+                </Grid2>
+                <Grid2>
+                    <Reviews />
+                </Grid2>
             </Typography>
         </>
     );

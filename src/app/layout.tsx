@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import theme from '@/theme';
 import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
-import MenuBar from '../components/MenuBar';
+import ResponsiveAppBar from '../components/ResponsiveAppBar';
 import type { Metadata } from 'next';
 import Footer from '../components/Footer';
 
@@ -16,7 +16,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
                 <AppRouterCacheProvider options={{ enableCssLayer: true }}>
                     <ThemeProvider theme={theme}>
                         <CssBaseline />
-                        <MenuBar />
+                        <ResponsiveAppBar />
                         {props.children}
                         <Footer />
                     </ThemeProvider>
@@ -27,6 +27,6 @@ export default function RootLayout(props: { children: React.ReactNode }) {
 }
 
 export const metadata: Metadata = {
-    title: 'Horn Ok Please Hostel Mandrem',
-    description: 'A backpacker’s hostel in Mandrem. For travellers. Not tourists!',
+    title: 'Holy Cross Tours and Travels',
+    description: 'A car rental service based in Goa',
 };
