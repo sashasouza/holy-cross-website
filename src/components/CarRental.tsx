@@ -3,7 +3,7 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Box from '@mui/material/Box';
-import { Container, Grid2, Typography } from '@mui/material';
+import { Grid2, Typography } from '@mui/material';
 
 import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 
@@ -38,7 +38,7 @@ export default function CarRental() {
                             sx={{
                                 maxWidth: 300,
                                 minWidth: 200,
-                                width: '100%', // Ensure cards take full width on smaller screens
+                                width: '100%',
                                 transition: "transform 0.15s ease-in-out",
                                 "&:hover": { transform: "scale3d(1.05, 1.05, 1)" },
                             }}
@@ -68,6 +68,7 @@ export default function CarRental() {
                                 </Typography>
                                 <Box sx={{
                                     backgroundColor: 'secondary.light',
+                                    fontWeight: 'fontWeightBold'
                                 }}>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: 1, paddingX: '0.5em' }}>
                                         <Typography variant="body2" color="text.primary" sx={{ marginTop: 1 }}>
@@ -78,16 +79,18 @@ export default function CarRental() {
                                         </Typography>
                                     </Box>
                                     <Box sx={{ display: 'flex', justifyContent: 'space-between', marginTop: 1, paddingX: '0.5em' }}>
-                                        <Typography variant="body2" color="secondary.main" sx={{ marginBottom: 1 }}>
+                                        <Typography variant="body2" color="secondary.main" sx={{ marginBottom: 1, fontWeight: '700' }}>
                                             <CurrencyRupeeIcon sx={{
                                                 fontSize: 'small',
                                                 marginBottom: '-0.15em',
+                                                fontWeight: '700'
                                             }} />On Request/-:
                                         </Typography>
-                                        <Typography variant="body2" color="secondary.main" sx={{ marginBottom: 1 }}>
+                                        <Typography variant="body2" color="secondary.main" sx={{ marginBottom: 1, fontWeight: '700' }}>
                                             <CurrencyRupeeIcon sx={{
                                                 fontSize: 'small',
                                                 marginBottom: '-0.1em',
+                                                fontWeight: '700'
                                             }} />
                                             {element.priceOnRequest}
                                         </Typography>

@@ -1,5 +1,5 @@
 'use client';
-import { Box, Button, Grid2, Link, Typography } from '@mui/material';
+import { Box, Button, Grid2, Typography } from '@mui/material';
 import React from 'react';
 
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
@@ -27,46 +27,41 @@ function GeneralLinks() {
             >
                 General Links
             </Typography>
-            <Typography
-                variant="body1"
+            <Box
                 sx={{
-                    backgroundColor: 'primary.main',
                     color: 'text.secondary',
                     py: '0.5em',
-                    wordBreak: 'break-word'
+                    wordBreak: 'break-word',
+                    maxWidth: '100%',
+                    display: 'flex',
+                    flexDirection: 'row',
+                    justifyContent: 'flex-start',
+                    boxShadow: 0,
+                    overflowX: 'auto',
                 }}>
-                <Box
-                    sx={{
-                        maxWidth: '100%', backgroundColor: 'primary.main',
-                        display: 'flex',
-                        direction: 'row',
-                        justifyItems: 'left',
-                        boxShadow: 0,
-                    }}>
-                    {menuItems.map((element, index) => (
-                        <Button
-                            key={index}
-                            type="button"
-                            variant="text"
-                            sx={{
-                                fontSize: 'smaller',
-                                color: 'text.secondary',
-                                maxWidth: '100%',
-                                '&:hover': {
-                                    color: 'primary.contrastText'
-                                },
-                                '&:first-child': { paddingLeft: 0 }
-                            }}
-                            onClick={() => {
-                                document.getElementById(element.href)?.scrollIntoView({ behavior: 'smooth' })
-                            }}
-                        >
-                            <ChevronRightIcon />
-                            {element.label}
-                        </Button>
-                    ))}
-                </Box>
-            </Typography>
+                {menuItems.map((element, index) => (
+                    <Button
+                        key={index}
+                        type="button"
+                        variant="text"
+                        sx={{
+                            fontSize: 'smaller',
+                            color: 'text.secondary',
+                            maxWidth: '100%',
+                            '&:hover': {
+                                color: 'primary.contrastText'
+                            },
+                            '&:first-child': { paddingLeft: 0 }
+                        }}
+                        onClick={() => {
+                            document.getElementById(element.href)?.scrollIntoView({ behavior: 'smooth' })
+                        }}
+                    >
+                        <ChevronRightIcon />
+                        {element.label}
+                    </Button>
+                ))}
+            </Box>
         </Grid2>
     );
 }

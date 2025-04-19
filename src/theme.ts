@@ -3,7 +3,7 @@ import { createTheme } from '@mui/material/styles';
 import { Poppins } from 'next/font/google';
 
 const lato = Poppins({
-    weight: ['100', '300', '400', '700', '900'],
+    weight: ['300', '400', '500', '700'],
     subsets: ['latin'],
     display: 'swap',
 });
@@ -36,22 +36,6 @@ const theme = createTheme({
             fontSize: '0.75rem',
         },
     },
-    //components: {
-    // MuiAlert: {
-    //     styleOverrides: {
-    //         root: {
-    //             variants: [
-    //                 {
-    //                     props: { severity: 'info' },
-    //                     style: {
-    //                         backgroundColor: '#60a5fa',
-    //                     },
-    //                 },
-    //             ],
-    //         },
-    //     },
-    // },
-    //},
 });
 
 export default theme;

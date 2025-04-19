@@ -1,6 +1,3 @@
-import FaceBook from '../assets/FaceBook.png';
-import Instagram from '../assets/Instagram.png';
-import YouTube from '../assets/YouTube.png';
 import Innova from '../assets/innovacrysta.jpeg';
 import Review1 from '../assets/Reviews/review1.png';
 import Review2 from '../assets/Reviews/review2.png';
@@ -38,21 +35,3 @@ export const contacts =
 }
 
 export const paletteColorsOrder = [paletteColors.blue, paletteColors.red, paletteColors.yellow];
-
-export const socialSites = [
-    {
-        name: 'FaceBook',
-        img: FaceBook,
-        link: 'https://www.facebook.com',
-    },
-    {
-        name: 'Instagram',
-        img: Instagram,
-        link: 'https://www.instagram.com/',
-    },
-    {
-        name: 'Youtube',
-        img: YouTube,
-        link: 'https://www.youtube.com/',
-    },
-];

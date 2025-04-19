@@ -1,7 +1,7 @@
 'use client';
 import * as React from 'react';
 import Image from 'next/image';
-import { Drawer, Backdrop, Container, Grid2 as Grid, IconButton, Typography, Button, Box } from '@mui/material';
+import { Drawer, Container, Grid2 as Grid, IconButton, Button, Box } from '@mui/material';
 import MenuSharp from '@mui/icons-material/MenuSharp';
 
 import Logo from '../assets/logo.png';
@@ -43,7 +43,7 @@ export default function MenuBar() {
                     <Grid container alignItems="center" justifyContent={{ xs: 'flex-end', md: 'center' }} sx={{ height: { xs: 50, sm: 80 } }} size="auto">
                         <Box sx={{ display: { xs: 'none', md: 'flex' }, gap: 2 }}>
                             {menuItems.map((item) => (
-                                <Button key={item.label} variant="text" color="primary" onClick={() => {
+                                <Button key={item.label} variant="text" color="primary" sx={{ color: 'text.primary', fontWeight: '300' }} onClick={() => {
                                     document.getElementById(item.href)?.scrollIntoView({ behavior: 'smooth' })
                                 }}>
                                     {item.label}

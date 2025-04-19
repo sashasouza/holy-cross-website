@@ -1,4 +1,4 @@
-import { Grid2, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
+import { Box, Grid2, List, ListItem, ListItemIcon, ListItemText, Typography } from '@mui/material';
 import React from 'react';
 
 import { contacts } from '../components/constants'
@@ -25,8 +25,7 @@ function ContactUs() {
             >
                 Contact Us
             </Typography>
-            <Typography
-                variant='body1'
+            <Box
                 sx={{
                     backgroundColor: 'primary.main',
                     color: 'text.secondary',
@@ -67,7 +66,7 @@ function ContactUs() {
                         </ListItemText>
                     </ListItem>
                 </List>
-            </Typography>
+            </Box>
         </Grid2>
     );
 }
