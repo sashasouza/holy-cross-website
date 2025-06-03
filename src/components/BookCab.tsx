@@ -7,7 +7,7 @@ import { Typography } from '@mui/material';
 export default function BasicCard() {
     return (
         <Card sx={{
-            minWidth: 350,
+            minWidth: 320,
             maxWidth: 720,
             backgroundColor: "secondary.light"
         }}>

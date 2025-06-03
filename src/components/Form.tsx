@@ -46,7 +46,7 @@ export default function ContactUs() {
         e.preventDefault()
         handleOpenSpinner
 
-        if (mobile.length > 0 || email.length > 0) {
+        if ((mobile.length > 0 && mobile.match("^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$")) || (email.length > 0 && email.match("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}$"))) {
             try {
                 const emailParams = {
                     name: name,
@@ -82,7 +82,7 @@ export default function ContactUs() {
         else {
             handleCloseSpinner
             title = "Missing Data"
-            msg = "Please enter either mobile number or email address so that we can get in touch with you."
+            msg = "Please enter either a valid mobile number or valid email address so that we can get in touch with you."
         }
     }
 

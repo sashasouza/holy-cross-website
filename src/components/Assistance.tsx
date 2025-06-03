@@ -15,7 +15,7 @@ export default function Assistance() {
                 backgroundColor: "primary.main",
                 margin: '0 1em 1em 1em',
             }}>
-                <Typography variant="h3" sx={{ textAlign: 'center', color: "primary.contrastText", padding: '0.3em' }}>
+                <Typography variant="h3" sx={{ textAlign: 'center', color: "primary.contrastText", padding: '0.3em', fontSize: { xs: '2rem', lg: '3rem' } }}>
                     For Any Assistance Just <Link href={`tel:${contacts.phone}`} underline="none" color='secondary.light'>Call</Link> or <Link href={`https://wa.me/${contacts.phone}`} underline="none" color='secondary.light'>send a WhatsApp message</Link> to {contacts.phone} <br />
                 </Typography>
             </CardContent>

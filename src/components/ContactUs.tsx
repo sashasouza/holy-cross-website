@@ -6,6 +6,10 @@ import { contacts } from '../components/constants'
 import PhoneIcon from '@mui/icons-material/Phone';
 import EmailIcon from '@mui/icons-material/Email';
 import PlaceIcon from '@mui/icons-material/Place';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import Link from 'next/link';
+import { WhatsApp } from '@mui/icons-material';
 
 function ContactUs() {
     return (
@@ -64,6 +68,25 @@ function ContactUs() {
                         <ListItemText>
                             <strong>Address:</strong> {contacts.address}
                         </ListItemText>
+                    </ListItem>
+                    <ListItem disablePadding sx={{
+                        paddingTop: '1em'
+                    }}>
+                        <ListItemIcon>
+                            <Link href={`https://wa.me/${contacts.phone}`}>
+                                <WhatsApp sx={{
+                                    color: 'text.secondary'
+                                }} />
+                            </Link>
+                        </ListItemIcon>
+                        <ListItemIcon>
+                            <Link href="https://www.instagram.com/holycrosstoursandtravels?utm_source=qr&igsh=cjU1amVpcGt2bHpu">
+                                <InstagramIcon sx={{
+                                    color: 'text.secondary'
+                                }} />
+                            </Link>
+
+                        </ListItemIcon>
                     </ListItem>
                 </List>
             </Box>
