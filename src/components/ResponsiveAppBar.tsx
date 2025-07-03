@@ -30,8 +30,8 @@ export default function MenuBar() {
                     }}
                 >
                     <Grid sx={{ height: { xs: 50, sm: 80 } }} size="auto">
-                        <Image
-                            src={Logo}
+                        <img
+                            src={Logo.src}
                             alt="LOGO"
                             sizes="100vw"
                             style={{
