@@ -19,7 +19,7 @@ export const vehicles = [
     {
         vehicleImage: Innova,
         vehicleName: 'Innova Crysta',
-        seatingCapacity: '6+1',
+        seatingCapacity: '7+1',
         pricePerKm: 'Limit',
         priceOnRequest: '8h/80KM'
     }
